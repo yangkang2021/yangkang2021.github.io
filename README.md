@@ -6,7 +6,7 @@
 3. [卡尔曼滤波-个人总结](https://note.youdao.com/ynoteshare1/index.html?id=d017939340c681b27f1c9491bc7b7dce)
 
 ## 机器视觉(CV)
-1. [图像处理-数学公式](http://note.youdao.com/noteshare?id=7e5ce9b22ec6c852ed32a066d28d6bb8)
+1. [图像处理-数学公式](cv/math.md)
 
 ## 人工智能(AI)
 1. [多目标跟踪算法之deepsort]()
