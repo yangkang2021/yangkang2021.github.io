@@ -1,5 +1,5 @@
 # 一个程序员的学习笔记
-本人软件开发工作了10余年，有500余篇的笔记在有道云，现在准备逐步整理到markdown。
+本人软件开发工作了10余年，有500余篇的笔记在本地，现在准备逐步整理到markdown。
 
 说明：浏览器的数学公式支持不太好，可以附带pdf。
 
@@ -21,6 +21,9 @@
 1. [srs入门](rtc/learn_srs.md)
 2. [webrtc详细分析系列](rtc/webrtc.md)
 
-## (六)基础工具(Base)
+## (六)基础知识(Base)
 1. [openssl开发详解]()
-1. [docker开发要点](base/docker.md)
+2. [docker学习要点](base/docker.md)
+3. [运维管理常用命令](base/DevOps.md)
+4. 客户端开发四分天下：[web前端]() ，[QT]()，[Android]()，[IOS]()
+6. 后台开发：[Java]()，[C++]()，[NodeJS]()，[Python(Django 、Flask、Tornado)]()，[go(Golang Gin)]()
