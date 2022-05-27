@@ -8,14 +8,23 @@
 ## 1-基础知识与算法
 1. [openssl开发详解]()
 2. [docker学习要点](1-base/docker.md)
-3. [运维管理常用命令](1-base/DevOps.md)
+3. [运维管理常用命令]()
 
 ## 2-前端后台客户端
-1. 客户端开发四分天下：[web前端(react,vue,less/stylus/sass)]() ，[QT]()，[Android]()，[IOS]()
-2. 后台开发：[Java]()，[C++]()，[NodeJS]()，[Python(Django 、Flask、Tornado)]()，[go(Golang Gin)]()
+1. 客户端开发四分天下：
+    - web前端(react,vue,less/stylus/sass)
+    - QT
+    - Android
+    - IOS
+2. 后台开发5门技术
+    - Java
+    - go(Golang Gin)
+    - NodeJS
+    - Python(Django 、Flask、Tornado)
+    - C++
 3. [js异步开发总结](2-business/js_async.md)
-4. [nodejs开发总结]()
-4. [go开发总结]()
+4. [nodejs开发总结](2-business/nodejs.md)
+4. [golang开发记录](2-business/golang.md)
 
 ## 3-音视频与实时通讯
 1. [srs入门](3-webrtc/learn_srs.md)
