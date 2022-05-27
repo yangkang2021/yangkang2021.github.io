@@ -18,8 +18,8 @@
 1. [多目标跟踪算法之deepsort]()
 
 ## (五)实时通讯(RTC)
-1. [srs入门](rtc/learn_srs.md)
-2. [webrtc详细分析系列](rtc/webrtc.md)
+1. [srs入门](webrtc/learn_srs.md)
+2. [webrtc详细分析系列](webrtc/webrtc.md)
 
 ## (六)基础知识(Base)
 1. [openssl开发详解]()
