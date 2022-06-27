@@ -24,7 +24,8 @@
     - C++
 3. [js异步开发总结](2-business/js_async.md)
 4. [nodejs开发总结](2-business/nodejs.md)
-4. [golang开发记录](2-business/golang.md)
+5. [golang开发记录](2-business/golang.md)
+6. [etcd与分布式和微服务](2-business/etcd.md)
 
 ## 3-音视频与实时通讯
 1. [srs入门](3-webrtc/learn_srs.md)
@@ -38,12 +39,12 @@
 3. [卡尔曼滤波-个人总结-有道](https://note.youdao.com/ynoteshare1/index.html?id=d017939340c681b27f1c9491bc7b7dce)
 4. [卡尔曼滤波-个人总结](4-math/klm.md)
 
-## 5-图像处理与深度学习
+## 5-图像处理与深度学习与三维重建
 1. [图像处理-数学公式](5-cv/math.md)
 2. [多目标跟踪算法之deepsort]()
 
 
-## 6-实时渲染与三维重建
+## 6-实时渲染与三维场景与游戏开发
 
 
 ## 7-项目研究
