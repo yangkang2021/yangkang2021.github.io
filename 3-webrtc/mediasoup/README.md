@@ -10,4 +10,5 @@
 8. [mediasoup官方单端口实现](mediasoup_singleport.md)
 9. [ediasoup的demo的websocket的keepalive与断网检测](mediasoup_websocket_pingpong.md)
 10. [boardcaster](boardcaster.md)
+10. [mediasoup-rust](mediasoup-rust.md)
 
