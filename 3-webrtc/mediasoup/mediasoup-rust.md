@@ -2,7 +2,7 @@
 
 1. rust是nodejs的一种替代方案。并不是替代worker。
 2. rust与worker的交互：
-    - **每个线程启动一个worker，然后用四个回调函数来通讯。这跟nodejs与worker间的跨进程管道通讯完成不同，**
+    - **每个线程启动一个worker，然后用四个回调函数来通讯。这跟nodejs与worker间的跨进程管道通讯完成不同。**
     - 线程体：直接调用worker c++的mediasoup_worker_run函数。
     - rust启动worker的代码截图：
 ![](.mediasoup-rust_images/35f26072.png)
