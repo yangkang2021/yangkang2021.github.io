@@ -1,4 +1,4 @@
-# webrtc和mediasoup的nack，fec，red
+# WebRTC的nack，fec，red
 
 >行业前辈们的聊天纪要
 
