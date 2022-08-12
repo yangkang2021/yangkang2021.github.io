@@ -1,5 +1,6 @@
 # mediasoup知识体系
 
+1. [mediasoup的开源项目整理](01-mediasoup-opensource.md)
 1. [mediasoup-demo编译](mediasoup_build.md)
 2. [mediasoup-demo的docker部署](mediasoup_docker.md)
 3. [mediasoup-demo信令](mediasoup_demo_signalling.md)
@@ -10,5 +11,7 @@
 8. [mediasoup官方单端口实现](mediasoup_singleport.md)
 9. [ediasoup的demo的websocket的keepalive与断网检测](mediasoup_websocket_pingpong.md)
 10. [boardcaster](boardcaster.md)
-10. [mediasoup-rust](mediasoup-rust.md)
+11. [mediasoup-rust](mediasoup-rust.md)
+12. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
+13. [webrtc和mediasoup的nack,fec,red](12-nack-fec-red.md)
 
