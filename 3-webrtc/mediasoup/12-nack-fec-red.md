@@ -24,6 +24,7 @@
 - fec+nack ，基本能抗70%
 - webrtc准备把pcc加到拥塞控制中
 - opus音频：延时小时，用带内fec+nack ；延时大时，用带内fec+red
+- 抗突发丢包：可以预发一些fec包处理，nack的话会引入时延
 
 ### 5.问题
 - fec耗cpu还没太大用？暂时只考虑red, 不考虑video fec？
