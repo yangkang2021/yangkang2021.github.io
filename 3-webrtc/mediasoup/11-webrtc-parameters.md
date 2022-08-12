@@ -31,12 +31,12 @@
     - RtpCapabilities：描述服务端或者客户端接收媒体的能力。 所以RtpParameters不能乱填，要符合对方的RtpCodecCapability。
         - Array<RtpCodecCapability> codecs
         - Array<RtpHeaderExtension> headerExtension
-2. mediasoup的RTP协商[](https://mediasoup.org/documentation/v3/mediasoup/rtp-parameters-and-capabilities/#RTP-Negotiation-Overview)
+2. mediasoup的RTP协商[官方说明](https://mediasoup.org/documentation/v3/mediasoup/rtp-parameters-and-capabilities/#RTP-Negotiation-Overview)
     - 发送 RTP 的实体（mediasoup 或端点）决定发送 ID。
     - 接收 RTP 的实体（mediasoup 或端点）必须遵守这些 id。
 
 ### 3. 读代码看流程
-3. rtp控制流程（非常重要）
+3. rtp控制流程（非常重要，应该画一个交互图）
     - 服务端启动时确定sfu-RtpCapabilities：读取config.js的mediasoup.routerOptions.mediaCodecs指定了支持的所有编码格式。
     - 客户端1：通过信令拿到服务端支持的sfu-RtpCapabilities。
     - 客户端2：Device->Load(sfu-RtpCapabilities)：合并本地支持的rtp参数和服务端的rtp参数。得到：
