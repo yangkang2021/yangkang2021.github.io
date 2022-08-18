@@ -14,13 +14,5 @@
 11. [mediasoup-rust](mediasoup-rust.md)
 12. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
 13. [webrtc和mediasoup的nack,fec,red](12-nack-fec-red.md)
-13. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
-
-
-
-关于立体声
-是很多地方会有resample 或者downmix操作。突然想到应该有人研究过48k 立体声直通，比如做直播的。
-立体声的话，sdp要加stereo=1吧
-检查采集音源, 推流端SDP, 拉流端SDP. 拉流渲染设备是否支持..浏览器基本就这几个影响.
-
-，两个udp的socket绑定同一端口，如果数据包的目的地址是单播地址，则只有最后一个socket获得数据，而如果数据包的目的地址是多播地址，则两个socket同时获得相同的数据。
+14. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
+15. [mediasoup怎么支持双声道与立体声](14-mediasoup怎么支持双声道立体声.md)
