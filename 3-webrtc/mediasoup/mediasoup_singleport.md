@@ -18,3 +18,20 @@
     - [mediasoup的API文档变化-WebRtcServer](https://mediasoup.org/documentation/v3/mediasoup/api/#WebRtcServer)
 7. 一张图总结
 ![](.mediasoup_singleport_images/d32492c0.jpeg)
+
+
+8. 扩展1
+关于单端口，这里面有3个问题： https://mp.weixin.qq.com/s/IAmJAZ3HA0_FIX0-lannZw
+1. tcp和udp可以用同一端口吗？ 可以
+2. 两个tcp可以吗？ 可以，需要reuse。 nginx就是那样的。 但可能出现惊群现象。
+3. 两个upd可以吗？没测试，但reuse模式应该可以，但只有一个进程能收到包。
+mediasoup createWebRtcTransport的时候 要先告诉服务端用tcp还是udp
+
+9. 扩展2[Linux下端口复用(SO_REUSEADDR与SO_REUSEPORT)](http://t.zoukankan.com/hehehaha-p-6332326.html)
+freebsd与linux下bind系统调用小结：只考虑AF_INET的情况（同一端口指ip地址与端口号都相同）
+    - freebsd支持SO_REUSEPORT和SO_REUSEADDR选项,而linux只支持SO_REUSEADDR选项。
+    - freebsd下,使用SO_REUSEPORT选项，两个tcp的socket可以绑定同一个端口；同样，使用SO_REUSEPORT选项，两个udp的socket可以绑定同一个端口。
+    - linux下，两个tcp的socket不能绑定同一个端口；而如果使用SO_REUSEADDR选项，两个udp的socket可以绑定同一个端口。
+    - freebsd下，两个tcp的socket绑定同一端口，只有第一个socket获得数据。
+    - freebsd下，两个udp的socket绑定同一端口，如果数据包的目的地址是单播地址，则只有第一个socket获得数据，而如果数据包的目的地址是多播地址，则两个socket同时获得相同的数据。
+    - linux下,两个udp的socket绑定同一端口，如果数据包的目的地址是单播地址，则只有最后一个socket获得数据，而如果数据包的目的地址是多播地址，则两个socket同时获得相同的数据。
