@@ -39,7 +39,7 @@
 3. rtp控制流程（非常重要，应该画一个交互图）
     - 服务端启动时确定sfu-RtpCapabilities：读取config.js的mediasoup.routerOptions.mediaCodecs指定了支持的所有编码格式。
     - 客户端1：通过信令拿到服务端支持的sfu-RtpCapabilities。
-    - 客户端2：Device->Load(sfu-RtpCapabilities)：合并本地支持的rtp参数和服务端的rtp参数。得到：
+    - 客户端2：Device->Load(sfu-RtpCapabilities)：取交集（本地支持的rtp参数和服务端的rtp参数）。得到：
         - extendedRtpCapabilities
         - recvRtpCapabilities
     - 客户端3：创建SendTransport和RecvTransport。传入extendedRtpCapabilities。

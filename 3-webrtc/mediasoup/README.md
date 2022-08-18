@@ -16,3 +16,5 @@
 13. [webrtc和mediasoup的nack,fec,red](12-nack-fec-red.md)
 14. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
 15. [mediasoup怎么支持双声道与立体声](14-mediasoup怎么支持双声道立体声.md)
+15. [mediasoup全端支持h264以及硬编硬解的方案](15-mediasoup全端支持h264以及硬编硬解的方案.md)
+15. [mediasoup全端支持h265的4K的方案.md](16-mediasoup全端支持h265的4K的方案.md)

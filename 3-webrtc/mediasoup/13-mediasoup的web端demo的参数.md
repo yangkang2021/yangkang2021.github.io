@@ -35,7 +35,9 @@
         resolution : 'hd'  //改这里
     };
     ```
-### 3. 关于码率-simulcast-svc设置：
+### 3. 关于码率，simulcast，svc设置：
+> scaleResolutionDownBy控制simulcast降采样比例
+    
     ```
     // Used for simulcast webcam video.
     const WEBCAM_SIMULCAST_ENCODINGS =
