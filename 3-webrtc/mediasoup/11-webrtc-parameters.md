@@ -10,7 +10,7 @@
 - 怎么控制simucast的层数，每一层的参数？
     - Produce的encodings
 - 怎么控制svc的参数？
-    - Produce的encodings的scalabilityMode参数
+    - Produce的encodings的scalabilityMode参数,还有scale_resolution_down_by，浏览器用的scaleResolutionDownBy
 - 怎么通过信令选择特定的simucast层与svc层？
     - 通过consumer.setPreferredLayers()选择空间/时间层。
     - 会自动切layer还是需要根据downlinkBwe信令切？
