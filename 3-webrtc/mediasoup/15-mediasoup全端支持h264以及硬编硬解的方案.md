@@ -22,6 +22,8 @@
 2. 仅支持2两打包模式，"1"这种分片模式优先。[RFC文档](https://www.rfc-editor.org/rfc/pdfrfc/rfc6184.txt.pdf)
     - packetization-mode="1" //每个NALU分片，更适合udp
     - packetization-mode="0" //每个NALU一个rtp包，更适合tcp
+    - [rtp h264打包参考文档1](https://www.likecs.com/show-204814195.html)
+    - [rtp h264打包参考文档2](https://blog.csdn.net/qq_41681715/article/details/112389282)
 
 ### (三)mediasoup的codec协商
 1. sfu：支持的codec来自config.js。需要手动列出来。
@@ -73,3 +75,12 @@
     - 需要扩展sdpformat：编解码都默认只支持kProfileConstrainedHigh和kProfileConstrainedBaseline。
     - 而且highprofile优先,是不是都已经硬件编码直接上high，没必要仅仅baseline了
  4. web: forceH264。浏览器支持哪些h64的codec格式呢？
+ 
+ ### 参考
+ ![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/96a1caaf.png)
+ ![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/1fb1ea48.png)
+ ![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/c8e94a86.png)
+ ![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/f3f9326d.png)
+ ![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/897ae82e.png)
+ ![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/c87133d5.png)
+ ![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/e6e4f1a5.png)
