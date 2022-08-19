@@ -12,7 +12,7 @@
    const rtpCapabilities = ortc.generateRouterRtpCapabilities(mediaCodecs);  //Worker.js
    generateRouterRtpCapabilities(mediaCodecs) //ortc.js::
    ```
-2. 客户端的编码工厂和界面工厂定义本客户端支持的全部codec
+2. 客户端的编码工厂和解码工厂定义本客户端支持的全部codec
     > 通过信令`getRouterRtpCapabilities`拿到服务端支持的mediasoupRouter.rtpCapabilities
     ```
     //room.js
