@@ -6,16 +6,17 @@
     - 视频码率在Produce时的encodings参数控制。
     - 音频参数TODO
 - 怎么控制视频编码格式？
+    - 以sfu配置的编码优先级为准。
     - Produce的codec参数,3.3.4支持
 - 怎么控制simucast的层数，每一层的参数？
-    - Produce的encodings
+    - Produce的encodings，每一个encoding就是一个simulcast。
 - 怎么控制svc的参数？
     - Produce的encodings的scalabilityMode参数,还有scale_resolution_down_by，浏览器用的scaleResolutionDownBy
 - 怎么通过信令选择特定的simucast层与svc层？
     - 通过consumer.setPreferredLayers()选择空间/时间层。
-    - 会自动切layer还是需要根据downlinkBwe信令切？
+    - 根据带宽估计自动切layer。
 - 怎么控制rtp扩展头与rtcp参数？
-- mediasoup的sdp协商过程？
+    - 看后续的mediasoup的sdp协商过程
 
 ### 2. 读官方文档（非常重要）:[RTP Parameters and Capabilities](https://mediasoup.org/documentation/v3/mediasoup/rtp-parameters-and-capabilities/#RTP-Negotiation-Overview)
 1. mediasoup不在使用sdp，而是用两个重要的概念控制参数：RtpParameters和 RtpCapabilities
@@ -53,6 +54,7 @@
 1.  mediasoup方便：
     - 流控方便：暂停，恢复，打开，关闭 很容易。
     - 干掉与sfu的sdp传输与协商：实现了自己的一套简单RtpParameters传递与协商。
+    - 参数控制变动容易：分辨率、码率、帧率、采样率、声道数，起始码率，最小码率，最大码率，codec，simulcast，svc。
 2. webrtc内建的编解码器测试
     - VP8：支持simulcast, 支持SVC
     - VP9： server报错不支持simulcast, 支持SVC且必须至少两层
