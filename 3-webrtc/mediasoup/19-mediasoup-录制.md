@@ -3,9 +3,11 @@
 ### 分析开源项目的录制原理
 > https://github.com/ethand91/mediasoup3-record-demo.git
 总结：
-- 客户端信令控制开始和结束录制。
+- 客户端信令控制开始和结束录制。按peer为单位。
 - 每个人每个流各一个录制，按音视频分开，按人分开。
 - 录制方法是用 plainRtpTransport，把流发给一个127.0.0.1udp端口，然后ffmpeg命令行或者gstream就收处理。
+- plainRtpTransport录制的优点：在nodejs层控制，无需更改worker任何代码。
+- 网友反馈：里面处理rtp抖动有问题，存下来的视频很容易花屏，缺帧等等等等。
 
 ### 流程走读
 1. 客户端点击【开始录制】，对每个peer开始录制和结束录制
