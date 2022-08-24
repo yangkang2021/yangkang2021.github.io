@@ -5,7 +5,7 @@
 
 ### 意义何在
 1. boardcaster的意义何在：展示一种整合的架构能力。
-2. mediasoup woker没有boardcaster的概念，后者是demo提出的。
+2. mediasoup worker没有boardcaster的概念，后者是demo提出的。
 3. boardcaster也是一个peer，但是无法接收实时信令通知。用http信令实现创建transport，produce人，comsumer等。
 
 ### 两个示例
