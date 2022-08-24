@@ -1,6 +1,6 @@
 # mediasoup的boardcaster
 > boardcaster展示用http创建Transport进行推拉流，不需要websocket。
-> 1. 不需要信令，ffmpeg，gstream等就能直接接入。
+> 1. 不需要信令，ffmpeg，gstreamer等就能直接接入。
 > 2. 不一定需要摄像头麦克风，纯音视频帧就能接入。
 
 ### 意义何在
