@@ -9,35 +9,31 @@
     - mediasoup_worker_run代码截图：
 ![](.mediasoup-rust_images/1ef4bc28.png)
 
-
-4. 项目组成：worker用的静态库
-```
-[workspace]
-members = [
-    "rust", //实现rust版本的sdk和 examples
-    "worker" //用make编译libmediasoup-worker静态库
-]
-```
-
-5. 示例
-启动两个线程examples/videorooms.rs
-```
-let rooms_registry = Data::new(RoomsRegistry::default());
-    HttpServer::new(move || {
-        App::new()
-            .app_data(worker_manager.clone())
-            .app_data(rooms_registry.clone())
-            .route("/ws", web::get().to(ws_index))
-    })
-    // 2 threads is plenty for this example, default is to have as many threads as CPU cores
-    .workers(2) 
-    .bind("127.0.0.1:3000")?
-    .run()
-    .await
-```
-
-
-3. 从mediasoup-rust看高并发架构的发展：(以下摘自srs的公众号)
+3. 项目组成：worker用的静态库
+    ```
+    [workspace]
+    members = [
+        "rust", //实现rust版本的sdk和 examples
+        "worker" //用make编译libmediasoup-worker静态库
+    ]
+    ```
+4. 示例
+启动两个线程rust/examples/videorooms.rs
+    ```
+    let rooms_registry = Data::new(RoomsRegistry::default());
+        HttpServer::new(move || {
+            App::new()
+                .app_data(worker_manager.clone())
+                .app_data(rooms_registry.clone())
+                .route("/ws", web::get().to(ws_index))
+        })
+        // 2 threads is plenty for this example, default is to have as many threads as CPU cores
+        .workers(2) 
+        .bind("127.0.0.1:3000")?
+        .run()
+        .await
+    ```
+5. 从mediasoup-rust看高并发架构的发展：(以下摘自srs的公众号)
     - **第一代高并发架构**：1990～2010年，多线程架构，一般比较老的服务器都是这种架构，一般无法解决C10K[1]问题，比如Adobe AMS[2]，Apache HTTP Server[3]，Janus WebRTC Server[4]。核心问题是多线程的水平扩展性问题，并发越多，线程之间的同步和竞争开销就越大（这个问题也是现代语言Go在性能方面的硬伤，特别是在超多CPU比如64核或128核时，多线程的损耗会更大）。
     - **第二代高并发架构**：2010～2020年，单线程架构，多进程或单进程单线程都是这种架构，C10K问题得到比较好的解决，比如Nginx[5]，SRS[6]，MediaSoup[7]。核心问题是单线程引入的异步回调问题[8]，新的语言比如Go引入轻量线程goroutine（协程）解决这个问题，老的语言比如C++20、JS await等都有对应的机制。另外多进程的进程间通信也会引入额外复杂性，比如直播和RTC的流的跨进程回源和拉流问题。
     - **第三代高并发架构**：隔离的多线程架构，比如云原生的数据面反向代理Envoy线程模型[9]，还有比Nginx更高性能的反向代理么，这就是Envoy[10]了，如下图所示。其实Envoy和Nginx都是事件驱动，但是Envoy是完全非阻塞[11]。而Envoy的多线程实际上和第一代的多线程也不同，线程之间几乎没有交互，可以看作是隔离的进程。由于是线程，所以它们之间的（少量）通信也很容易。同样，多线程也可以和轻量线程结合使用。
