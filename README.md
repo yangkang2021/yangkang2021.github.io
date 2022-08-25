@@ -25,6 +25,7 @@
 3. [js异步开发总结](2-business/js_async.md)
 4. [nodejs开发总结](2-business/nodejs.md)
 5. [golang开发记录](2-business/golang.md)
+5. [go语言四剑客](2-business/go语言四剑客.md)
 6. [etcd与分布式和微服务](2-business/etcd.md)
 
 ## 3-音视频与实时通讯
