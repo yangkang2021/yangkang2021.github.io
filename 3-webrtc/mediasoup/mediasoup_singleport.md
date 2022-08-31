@@ -1,6 +1,6 @@
 # mediasoup官方单端口实现
-添加中间层：WebRtcServer，只能做到每一个worker各一个端口。
-
+> 添加中间层：WebRtcServer，只能做到每一个worker各一个端口。
+> 3.10.0 2022-6-22
 1. 实现方式：通过添加中间层WebRtcServer实现。由WebRtcServer统一接收包后给到WebrtcTrasnport走原来的流程。
 2. 对客户端没有影响： 所有的流程，接口，信令不变。
 3. 兼容性：支持单端口同时保留多端口方案。demo默认单端口，可用MEDIASOUP_USE_WEBRTC_SERVER=false切换到原来的多端口方案。

@@ -31,5 +31,17 @@
 - red的成本太高，流量翻倍？
 - nack+fec+red是不是更加冗余？
 
-### 5.参考
+### 6.参考
 - 提到一个开源项目Jitsi Meet：https://jitsi.org/jitsi-meet/
+
+### 7. FlexFec的nack和ssrc
+1. flexfec开启可以nack的，
+2. ulfec开启不能nack
+3. flexfec是单独的ssrc，flex和rtx都是另外独立ssrc
+4. nack 是同一个ssrc, nack + rtx 是不同的ssrc .nack有两种啊，一种是普通重传，一种是rtx
+5. 目前的webrtc 视频只开nack ，抗不了20%丢包
+6. 264 flexfec和nack可以并存的。那个是指flexfec自己不增加nack这个fmtp。对于red ulpfec则全部rtcp feedback都不加
+7. 音频nack 是同一条流，视频nack 是分开的rtx 
+8. https://blog.csdn.net/chenquangobeijing/article/details/123327504
+9. 如果启用FlexFec，那丢包重传是用原有的单独的rtx包还是用FlexFec 本身带的重传功能？
+
