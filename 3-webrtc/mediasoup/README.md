@@ -21,3 +21,4 @@
 15. [mediasoup的媒体协商流程](17-mediasoup的媒体协商流程.md)
 15. [webrtc各平台的编码工厂支持情况](18-webrtc各平台的编码工厂支持情况.md)
 15. [mediasoup-录制](19-mediasoup-录制.md)
+15. [视频会议中优化sfu以吸取mcu的优点](21-mediasoup_sfu_vs_mcu)
