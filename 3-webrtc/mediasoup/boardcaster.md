@@ -64,20 +64,20 @@
     - 实现原理：使用PlainRtpTransport转发纯rtp包实现
     - 单通道单流：1个PlainRtpTransport是否只能推拉一路流，多路流rtp包混在一起ffmpeg能否解包。
     - 没有信令：peer和流的变化无法通知。
-    - peer： 没有信令通知，就应独立于peers单独存在，不应该join，能拿到producer列表就行。
+    - peer： 没有信令通知，就应独立于peers单独存在，不一定要join，能拿到producer列表就行拉流。
      
 4. 推流流程：
     > 这里假设每1个PlainRtpTransport对应1路推流或者拉流
     
     - 在room内创建一个ffmpegPeer
-    - 创建rtp接收端：给ffmpegPeer创建PlainRtpTransport，返回得到服务端监听的ip和端口。
+    - 创建server的rtp接收端：给ffmpegPeer创建PlainRtpTransport，返回得到服务端监听的ip和端口。
     - 创建produce流：流的rtpParameters编码格式参数。
     - 用gstreamer或者ffmpeg 往 服务端监听的ip和端口 推送rtp包。
 
 4. 拉流流程：
     > 这里假设每1个PlainRtpTransport对应1路推流或者拉流
     - 在room内创建一个ffmpegPeer，可以推拉流共用
-    - 创建rtp接收端：给ffmpegPeer创建PlainRtpTransport，返回得到服务端监听的ip和端口。
+    - 创建server的rtp接收端：给ffmpegPeer创建PlainRtpTransport，返回得到服务端监听的ip和端口。
     - 创建consumer
     - connect到PlainRtpTransport：把本地的接收端口给到服务器
     - 用gstreamer或者ffmpeg在本地端口 接收rtp包
