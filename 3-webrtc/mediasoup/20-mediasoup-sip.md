@@ -1,0 +1,2 @@
+sip话机可以直接接入janus，或者janus可以直接与freeswitch等级联
+我们信令走sip，媒体是在webrtc上修改的，和其他的sip话机都能完好互通。
