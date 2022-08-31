@@ -1,7 +1,6 @@
 # demo信令：
 信令交互图
-![](.mediasoup_demo_signalling_images/164988fd.jpeg)
-
+![](.mediasoup_demo_signalling_images/2ae5fdd2.png)
 1. getRouterRtpCapabilities：获取rtp支持特性。
 2. join：从已经加入的成员那里创建Consumer会给客户端发newConsumer，并给他们发newPeer。
 3. createWebRtcTransport：在服务端创建transport。
