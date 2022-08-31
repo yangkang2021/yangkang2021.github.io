@@ -1,4 +1,4 @@
-# mediasoup的Broadcaster
+# mediasoup的Broadcaster与ffmpeg-gstreamer接入
 > Broadcaster展示用http创建Transport进行推拉流，不需要websocket。
 > 1. 不需要信令，ffmpeg，gstreamer等就能直接接入。
 > 2. 不一定需要摄像头麦克风，纯音视频帧就能接入。
@@ -57,3 +57,28 @@
         -f tee \
         "[select=a:f=rtp:ssrc=${AUDIO_SSRC}:payload_type=${AUDIO_PT}]rtp://${audioTransportIp}:${audioTransportPort}?rtcpport=${audioTransportRtcpPort}|[select=v:f=rtp:ssrc=${VIDEO_SSRC}:payload_type=${VIDEO_PT}]rtp://${videoTransportIp}:${videoTransportPort}?rtcpport=${videoTransportRtcpPort}"
     ```
+   
+    
+## ffmpeg和gstreamer接入
+3. mediasoup接入ffmpeg进行推拉流
+    - 实现原理：使用PlainRtpTransport转发纯rtp包实现
+    - 单通道单流：1个PlainRtpTransport是否只能推拉一路流，多路流rtp包混在一起ffmpeg能否解包。
+    - 没有信令：peer和流的变化无法通知。
+    - peer： 没有信令通知，就应独立于peers单独存在，不应该join，能拿到producer列表就行。
+     
+4. 推流流程：
+    > 这里假设每1个PlainRtpTransport对应1路推流或者拉流
+    
+    - 在room内创建一个ffmpegPeer
+    - 创建rtp接收端：给ffmpegPeer创建PlainRtpTransport，返回得到服务端监听的ip和端口。
+    - 创建produce流：流的rtpParameters编码格式参数。
+    - 用gstreamer或者ffmpeg 往 服务端监听的ip和端口 推送rtp包。
+
+4. 拉流流程：
+    > 这里假设每1个PlainRtpTransport对应1路推流或者拉流
+    - 在room内创建一个ffmpegPeer，可以推拉流共用
+    - 创建rtp接收端：给ffmpegPeer创建PlainRtpTransport，返回得到服务端监听的ip和端口。
+    - 创建consumer
+    - connect到PlainRtpTransport：把本地的接收端口给到服务器
+    - 用gstreamer或者ffmpeg在本地端口 接收rtp包
+6. 参考实现[https://blog.csdn.net/weixin_29405665/article/details/111994983](https://blog.csdn.net/weixin_29405665/article/details/111994983)
