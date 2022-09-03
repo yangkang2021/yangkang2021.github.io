@@ -1,5 +1,9 @@
 # golang开发记录
 
+### goland配置protobuf
+1. 安装GenProtobuf(W David Oldford)插件，既可以在goland快速生成
+2. protoc-gen-go.exe安装到$GOPATH/bin: go install github.com/golang/protobuf/protoc-gen-go@latest
+3. potoc.exe安装到$GOPATH/bin或者$PATH: 从官网下载
 
 ### goland快捷键 http://t.zoukankan.com/gongxianjin-p-15513376.html
     ```
@@ -88,3 +92,4 @@
 
 ### 7. 技术细节
  - 关于context：https://blog.csdn.net/weixin_45994575/article/details/123314937
+ 
