@@ -4,6 +4,7 @@
 1. 安装GenProtobuf(W David Oldford)插件，既可以在goland快速生成
 2. protoc-gen-go.exe安装到$GOPATH/bin: go install github.com/golang/protobuf/protoc-gen-go@latest
 3. potoc.exe安装到$GOPATH/bin或者$PATH: 从官网下载
+4. GenProtobuf配置全局参数：--go_out=plugins=grpc:.
 
 ### goland快捷键 http://t.zoukankan.com/gongxianjin-p-15513376.html
     ```
