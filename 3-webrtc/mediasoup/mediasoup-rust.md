@@ -1,4 +1,4 @@
-## mediasoup的rust接口
+## mediasoup的rust接口与worker的启动方式
 
 1. rust是nodejs的一种替代方案。并不是替代worker。
 2. rust与worker的交互：

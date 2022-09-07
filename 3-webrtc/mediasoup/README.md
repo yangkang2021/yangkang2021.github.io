@@ -1,5 +1,6 @@
 # mediasoup知识体系
 
+### mediasoup基础
 1. [mediasoup的开源项目整理](01-mediasoup-opensource.md)
 1. [mediasoup-demo编译](mediasoup_build.md)
 2. [mediasoup-demo的docker部署-未迁移古来](mediasoup_docker.md)
@@ -10,8 +11,8 @@
 7. [protoo使用与实现](protoo.md)
 8. [mediasoup官方单端口实现](mediasoup_singleport.md)
 9. [mediasoup的demo的websocket的keepalive与断网检测](mediasoup_websocket_pingpong.md)
-10. [boardcaster](boardcaster.md)
-11. [mediasoup-rust](mediasoup-rust.md)
+10. [boardcaster与ffmpeg/gstreamer接入](boardcaster.md)
+11. [mediasoup的rust接口与worker的启动方式](mediasoup-rust.md)
 12. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
 13. [webrtc和mediasoup的nack,fec,red](12-nack-fec-red.md)
 14. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
@@ -22,3 +23,7 @@
 15. [webrtc各平台的编码工厂支持情况](18-webrtc各平台的编码工厂支持情况.md)
 15. [mediasoup-录制](19-mediasoup-录制.md)
 15. [视频会议中优化sfu以吸取mcu的优点](21-mediasoup_sfu_vs_mcu.md)
+
+### mediasoup-sfu内部分析
+1. [mediasoup-worker的启动参数](22-mediasoup-worker的启动参数.md)
+2. [worker封装层的对象模型](23-mediasoup-worker封装层的对象模型.md)
