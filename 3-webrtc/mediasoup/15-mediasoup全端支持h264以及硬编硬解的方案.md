@@ -1,5 +1,29 @@
 # mediasoup全端支持h264以及硬编硬解的方案
 
+
+### fix bug
+> 解决webrtc android sdk不支持华为麒麟手机h264硬件编码的bug
+- 原因: webrtc android 硬件编码 google只承认高通和三星的264硬件编码。 如图
+![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/f75bfb8b.png)
+- 华为海思麒麟芯片的h264硬件编码器名称：OMX.hisi.video.encoder.avc
+- 解决办法：
+```
+  private boolean isHardwareSupportedInCurrentSdkH264(MediaCodecInfo info) {
+    // First, H264 hardware might perform poorly on this model.
+    if (H264_HW_EXCEPTION_MODELS.contains(Build.MODEL)) {
+      return false;
+    }
+    String name = info.getName();
+    // QCOM H264 encoder is supported in KITKAT or later.
+    return (name.startsWith(QCOM_PREFIX) && Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
+        // Exynos H264 encoder is supported in LOLLIPOP or later.
+        || (name.startsWith(EXYNOS_PREFIX)
+               && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+        // Huawei hisi H264 encoder
+        || (name.startsWith("OMX.hisi."));
+  }
+```
+
 ### (一)怎么选择编码格式？这里暂时不考虑h265
 1. webrtc默认支持：vp8，vp9，h264，h265，av1软编解码。
    - 在windows，linux：还默认软编软解。
