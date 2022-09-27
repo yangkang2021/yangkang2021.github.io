@@ -23,6 +23,7 @@
         || (name.startsWith("OMX.hisi."));
   }
 ```
+- 建议直接return true就得了，否则mtk ，rk等等芯片都得加。
 
 ### (一)怎么选择编码格式？这里暂时不考虑h265
 1. webrtc默认支持：vp8，vp9，h264，h265，av1软编解码。

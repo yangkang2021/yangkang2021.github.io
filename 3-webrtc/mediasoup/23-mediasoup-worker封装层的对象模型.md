@@ -8,7 +8,7 @@
     3. 内部异常
     4. 主动发信号 
 2. 对象退出
-    1. gin run占据主线程，知道关闭才退出
+    1. gin run占据主线程，直到关闭才退出
 3. worker退出
     1. 创建失败直接panic(err)
     2. worker.On("died" --> os.Exit(1)
