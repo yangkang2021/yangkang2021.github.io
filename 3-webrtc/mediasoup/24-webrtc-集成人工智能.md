@@ -44,7 +44,3 @@ obs和webrtc怎么结合的：
     2. 很多人反过来，在obs内部实现一个webrtc output serveice。 就拥有了webrtc的直播软件
         - 你需要obs的界面就这样用，但是大多数webrtc都是视频通话，不是简单的直播推流，那就不能
 
-
-### Webassembly技术
-- tf.js opencv.js 都是webassembly技术吧
-- webassembly现在主要是什么方案：emsdk，rust，golang，微软那个c#的Blazor?

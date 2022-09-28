@@ -25,7 +25,8 @@
 15. [视频会议中优化sfu以吸取mcu的优点](21-mediasoup_sfu_vs_mcu.md)
 16. [24-webrtc-视频会议中-集成人工智能与Pipeline](24-webrtc-集成人工智能.md)
 17. [25-webrtc-自定义编解码工厂](25-webrtc-自定义编解码工厂.md)
-18. [26-mediasoup-webrtc压力测试.md](26-mediasoup-webrtc压力测试.md)
+18. [26-mediasoup-webrtc压力测试](26-mediasoup-webrtc压力测试.md)
+18. [27-webassembly技术](27-webassembly技术.md)
 
 ### mediasoup-sfu内部分析
 1. [mediasoup-worker的启动参数](22-mediasoup-worker的启动参数.md)
