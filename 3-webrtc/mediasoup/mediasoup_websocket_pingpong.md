@@ -5,7 +5,7 @@
 - 客户端也需要发ping，判断客户端自己是否断开
 
 ### 2. mediassoup的websocket server怎么检查客户端掉线
-- websocket收到ping都会回复pong
+- websocket收到ping都会回复pong，一般websocket实现库内部就会实现
 - protoo-sever会定期的ping client，默认ping-pong检查是60秒。所以意外断网可能要多等一会儿，但是可以修改配置。
 ![](.mediasoup_websocket_pingpong_images/8e0c0073.jpeg)
 - 改成600毫秒
