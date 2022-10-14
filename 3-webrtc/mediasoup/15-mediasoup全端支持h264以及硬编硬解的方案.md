@@ -1,7 +1,11 @@
 # mediasoup全端支持h264以及硬编硬解的方案
 
 
-### fix bug
+### opt
+> meidasoup优先h264 baseline，让Android和ios优先利用硬件编解码
+![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/ea5ce6ff.png)
+
+### fix bug2
 > 解决webrtc android sdk不支持华为麒麟手机h264硬件编码的bug
 - 原因: webrtc android 硬件编码 google只承认高通和三星的264硬件编码。 如图
 ![](.15-mediasoup全端支持h264以及硬编硬解的方案_images/f75bfb8b.png)
