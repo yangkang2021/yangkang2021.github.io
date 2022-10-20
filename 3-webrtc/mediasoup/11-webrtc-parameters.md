@@ -1,4 +1,7 @@
-# mediasoup的RTP参数控制
+# mediasoup媒体控制与协商机制
+
+
+![](.11-webrtc-parameters_images/0a3a42fa.png)
 
 ### 1.本文要探究的问题，这是迈向应用的重要一步：
 - 怎么控制分辨率、码率、帧率、采样率、声道数，起始码率，最小码率，最大码率？

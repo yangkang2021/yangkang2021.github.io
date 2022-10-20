@@ -75,7 +75,9 @@ type WebsocketTransport struct {
 ```
 ### 二 mediasoup-go项目对象模型
 1. 不依赖protoo项目
-2. 仅仅是封装核心6组件：worker，router，transport，producer，consumer，RtpObserver。
+2. 仅仅是封装核心6组件：
+    - worker，router，transport，producer，consumer，RtpObserver。
+    - 还有WebRtcServer，dataProducer，dataConsumer。
 3. Worker 存储所有自己创建的的对象
     - channel
     - payloadChannel
@@ -200,7 +202,7 @@ type PeerInfo struct {
 }
 ```
 
-### 四 worker57调控制指令
+### 四 worker57条控制指令
 1. worker.close                              
 2. worker.dump                               
 3. worker.getResourceUsage                   
