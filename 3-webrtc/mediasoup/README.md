@@ -1,34 +1,42 @@
 # mediasoup知识体系
 
-### mediasoup基础
+### 一. mediasoup编译运行调试
 1. [mediasoup的开源项目整理](01-mediasoup-opensource.md)
-1. [mediasoup-demo编译](mediasoup_build.md)
-2. [mediasoup-demo的docker部署-未迁移古来](mediasoup_docker.md)
-3. [mediasoup-demo信令](mediasoup_demo_signalling.md)
-4. [mediasoup的c++调试(vs2019/xcode/gdb)](mediasoup_cpp_debug.md)
-5. [libmediasoupclient介绍](libmediasoupclient_intro.md)
-6. [mediasoup-demo的android客户端代码介绍](mediasoup_demo_android_client.md)
-7. [protoo使用与实现](protoo.md)
-8. [mediasoup官方单端口实现](mediasoup_singleport.md)
-9. [mediasoup的demo的websocket的keepalive与断网检测](mediasoup_websocket_pingpong.md)
-10. [boardcaster与ffmpeg/gstreamer接入](boardcaster.md)
-11. [mediasoup的rust接口与worker的启动方式](mediasoup-rust.md)
-12. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
-13. [webrtc和mediasoup的nack,fec,red](12-nack-fec-red.md)
-14. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
-15. [mediasoup怎么支持双声道与立体声](14-mediasoup怎么支持双声道立体声.md)
-15. [mediasoup全端支持h264以及硬编硬解的方案](15-mediasoup全端支持h264以及硬编硬解的方案.md)
-15. [mediasoup全端支持h265的4K的方案-未开始](16-mediasoup全端支持h265的4K的方案.md)
-15. [mediasoup的媒体协商流程](17-mediasoup的媒体协商流程.md)
-15. [webrtc各平台的编码工厂支持情况](18-webrtc各平台的编码工厂支持情况.md)
-15. [mediasoup-录制](19-mediasoup-录制.md)
-15. [视频会议中优化sfu以吸取mcu的优点](21-mediasoup_sfu_vs_mcu.md)
-16. [24-webrtc-视频会议中-集成人工智能与Pipeline](24-webrtc-集成人工智能.md)
-17. [25-webrtc-自定义编解码工厂](25-webrtc-自定义编解码工厂.md)
-18. [26-mediasoup-webrtc压力测试](26-mediasoup-webrtc压力测试.md)
-18. [27-webassembly技术](27-webassembly技术.md)
+2. [mediasoup和mediasoup-demo编译](mediasoup_build.md)
+3. [mediasoup的c++调试(vs2019/xcode/gdb)](mediasoup_cpp_debug.md)
+4. [mediasoup-demo的docker部署-TODO](mediasoup_docker.md)
 
-### mediasoup-sfu内部分析
-1. [mediasoup-worker的启动参数](22-mediasoup-worker的启动参数.md)
-2. [worker封装层的对象模型](23-mediasoup-worker封装层的对象模型.md)
-3. [mediasoup-workder的cpp文件列表](worker-src-files.md)
+### 二. mediasoup基础
+1. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
+1. [mediasoup-demo信令](mediasoup_demo_signalling.md)
+2. [libmediasoupclient介绍](libmediasoupclient_intro.md)
+3. [mediasoup-demo的android客户端代码介绍](mediasoup_demo_android_client.md)
+4. [protoo使用与实现](protoo.md)
+5. [mediasoup官方单端口实现](mediasoup_singleport.md)
+6. [mediasoup的demo的websocket的keepalive与断网检测](mediasoup_websocket_pingpong.md)
+7. [boardcaster与ffmpeg/gstreamer接入](boardcaster.md)
+8. [mediasoup-录制](19-mediasoup-录制.md)
+
+### 三. mediasoup编解码器
+1. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
+2. [webrtc各平台的编码工厂支持情况](18-webrtc各平台的编码工厂支持情况.md)
+3. [webrtc-自定义编解码工厂](25-webrtc-自定义编解码工厂.md)
+4. [mediasoup全端支持h264以及硬编硬解的方案](15-mediasoup全端支持h264以及硬编硬解的方案.md)
+5. [mediasoup全端支持h265的4K的方案-未开始](16-mediasoup全端支持h265的4K的方案.md)
+6. [自定义编解码器实现mediasoup-webrtc压力测试](26-mediasoup-webrtc压力测试.md)
+
+### 四. mediasoup扩展
+1. [webrtc和mediasoup的nack,fec,red](12-nack-fec-red.md)
+2. [webrtc怎么支持双声道与立体声](14-mediasoup怎么支持双声道立体声.md)
+3. [视频会议中优化sfu以吸取mcu的优点](21-mediasoup_sfu_vs_mcu.md)
+4. [24-webrtc-视频会议中-集成人工智能与Pipeline](24-webrtc-集成人工智能.md)
+5. [27-webassembly技术](27-webassembly技术.md)
+
+### 四. mediasoup-worker-sdk的源码分析
+1. [worker封装层的对象模型-以go为例)](23-mediasoup-worker封装层的对象模型.md)
+2. [worker封装层的对象模型-以nodejs为例)](mediasoup-worker封装层分析-nodejs.md)
+3. [mediasoup的rust接口与worker的启动方式](mediasoup-rust.md)
+
+### 五. mediasoup-worker C++源码分析
+1. [mediasoup-workder的cpp文件列表](worker-src-files.md)
+2. [worker启动方式与启动参数](22-mediasoup-worker的启动参数.md)

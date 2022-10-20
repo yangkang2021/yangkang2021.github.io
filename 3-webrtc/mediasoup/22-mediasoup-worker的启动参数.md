@@ -1,4 +1,4 @@
-# worker启动参数
+# worker启动方式与启动参数
 >支持四类参数：logLevel，logTags, minPort/maxPort，dtls证书和私钥
 
 ### 1. worker三种使用及其启动都可以带启动参数
