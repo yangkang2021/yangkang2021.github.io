@@ -31,6 +31,7 @@
 3. [视频会议中优化sfu以吸取mcu的优点](21-mediasoup_sfu_vs_mcu.md)
 4. [24-webrtc-视频会议中-集成人工智能与Pipeline](24-webrtc-集成人工智能.md)
 5. [27-webassembly技术](27-webassembly技术.md)
+6. [卡顿率统计.md](卡顿率统计.md)
 
 ### 四. mediasoup-worker-sdk的源码分析
 1. [worker封装层的对象模型-以go为例)](23-mediasoup-worker封装层的对象模型.md)

@@ -39,7 +39,7 @@
 ### 3. 基本知识
 1. 新版不在需要手动配置GOPATH, 默认在用户目录下。
 2. 采用mod管理项目。依赖库默认下载到GOPATH的pkg目录。
-3. go env -w GOPROXY=https://goproxy.cn,direct
+3. 配置go代理：go env -w GOPROXY=https://goproxy.cn,direct
 
 ### 4. 仓库-模块-目录/包-文件-变量-函数
 ![](.golang_images/go_tree.jpeg)
