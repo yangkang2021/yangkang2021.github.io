@@ -1,22 +1,29 @@
-# WebRTC的nack，fec，red
+# WebRTC的nack，red，fec
 
->行业前辈们的聊天纪要
+### 一. nack/red/fec的支持情况和默认开启
+>默认抗丢包方案：音频靠opus的带内fec，视频靠nack重传。
 
-### 1.nack
-- 必须的
+类型 | nack | red | fec | mediasoup-fec
+---|---|---|---|---
+音频 | 支持，默认**不开启** | 支持，默认**不开启**|只支持opus的带内fec，只有opus默认开启|支持
+视频 | 支持，默认开启 | 支持，只有h264默认开启| 支持，只有h264默认开启ulpfec|不支持，因消耗cpu
 
-### 2.fec
-- 带内fec增加很少带宽
-- mediasoup不支持fec，fec可能会消耗大量cpu
+
+### 二. 简单总结 
+- 视频默认只开nack ，抗不了20%丢包。
+- 音频opus带内fec增加很少带宽
+- flexfec开启可以nack的，ulpfec开启不能nack。 
+- flexfec是单独的ssrc，ulpfec不是。
+- 视频nack重传有两种一种是普通重传，一种是rtx重传。后者独立ssrc。音频重传只是普通重传。
 - mediasoup基于packet, 比基于frame的实现fec要困难
-
-### 3.red
+ 
+### 三. 音频开启red抗丢包
 - webrtc M88甚至更早就支持opus red，M99已经默认开启，但协商不成功则不启用。
 - red相当于成本翻倍，但音频流量占比少，所以音频加上red能提高音频质量而不用占用很多带宽完全值得。
 - red虽然增加了流量，但是他不增加udp数据包个数，这个很重要，在一定程度可以避免网络拥塞的恶化
 - sfu如果拉流端有的支持、有的不支持red，sfu不能透传会比较麻烦。
 
-### 4.经验
+### 四.经验
 - 冗余度(指抗丢包的冗余带宽占比)=丢包率的时候性价比最高。
 - webrtc无法识别丢包是拥塞导致的还是物理链路原因，就会预测降带宽，导致预测结果上不去而不发送足够fec和red，可以强行发送。
 - 大厂抗大丢包率(百分之几十)靠fec
@@ -26,22 +33,10 @@
 - opus音频：延时小时，用带内fec+nack ；延时大时，用带内fec+red
 - 抗突发丢包：可以预发一些fec包处理，nack的话会引入时延
 
-### 5.问题
+### 五.问题
 - fec耗cpu还没太大用？暂时只考虑red, 不考虑video fec？
 - red的成本太高，流量翻倍？
 - nack+fec+red是不是更加冗余？
-
-### 6.参考
+- 如果启用FlexFec，那丢包重传是用原有的单独的rtx包还是用FlexFec 本身带的重传功能？
+- h264 flexfec和nack可以并存的。那个是指flexfec自己不增加nack这个fmtp。对于red ulpfec则全部rtcp feedback都不加
 - 提到一个开源项目Jitsi Meet：https://jitsi.org/jitsi-meet/
-
-### 7. FlexFec的nack和ssrc
-1. flexfec开启可以nack的，
-2. ulfec开启不能nack
-3. flexfec是单独的ssrc，flex和rtx都是另外独立ssrc
-4. nack 是同一个ssrc, nack + rtx 是不同的ssrc .nack有两种啊，一种是普通重传，一种是rtx
-5. 目前的webrtc 视频只开nack ，抗不了20%丢包
-6. 264 flexfec和nack可以并存的。那个是指flexfec自己不增加nack这个fmtp。对于red ulpfec则全部rtcp feedback都不加
-7. 音频nack 是同一条流，视频nack 是分开的rtx 
-8. https://blog.csdn.net/chenquangobeijing/article/details/123327504
-9. 如果启用FlexFec，那丢包重传是用原有的单独的rtx包还是用FlexFec 本身带的重传功能？
-
