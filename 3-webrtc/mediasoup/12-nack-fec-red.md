@@ -10,11 +10,12 @@
 
 
 ### 二. 简单总结 
+- opus的带内fec是codec自带的，就是原始音频包。opus带内fec增加很少带宽。
 - 视频默认只开nack ，抗不了20%丢包。
-- 音频opus带内fec增加很少带宽
 - flexfec开启可以nack的，ulpfec开启不能nack。 
 - flexfec是单独的ssrc，ulpfec不是。
 - 视频nack重传有两种一种是普通重传，一种是rtx重传。后者独立ssrc。音频重传只是普通重传。
+- 视频red和原始媒体同一个ssrc，rtx和fec独立ssrc。
 - mediasoup基于packet, 比基于frame的实现fec要困难
  
 ### 三. 音频开启red抗丢包
