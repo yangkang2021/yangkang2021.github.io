@@ -49,5 +49,9 @@ mysql> SELECT * FROM msg WHERE type REGEXP 'TX|RX|TR' AND (SELECT COUNT(DISTINCT
 ![](.sql_images/0198a0ab.png)
 ![](.sql_images/06ffe48f.png)
 
+针对MySQL，其条件执行顺序是 从左往右，自上而下。
+
+针对Orcale，其条件执行顺序是从右往左，自下而上。
+
 [参考链接](https://www.jianshu.com/p/ff8bc0ec6365)
 
