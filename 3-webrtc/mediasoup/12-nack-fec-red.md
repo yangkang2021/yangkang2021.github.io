@@ -21,7 +21,7 @@
  
 总结：
 - 音频靠opus的带内fec + 视频靠nack重传：这是最低成本的方案同时也是最有效的方案。
-- 还想提升一下：就把把音频的nack/red打开，naitive视频的flexfec打开。
+- 还想提升一下：就把音频的nack/red打开，native视频的flexfec打开。
 
 
 ### 二. 简单总结 
