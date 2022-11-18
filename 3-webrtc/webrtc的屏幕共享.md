@@ -14,9 +14,9 @@
     - **分析：没有录制系统声音，mic的声音在通话流。**
     - [MediaProjection使用参考](https://www.itxm.cn/post/23918.html)
 3. ios
-    - 没用实现
+    - **没用实现**
 
 ### 三. 我们的方案
 1. pc：用obs。
 2. Android：在webrtc android的基础上增加AudioTrack录制系统声音。
-3. ios：ReplayKit实现。
+3. ios：用ReplayKit实现。
