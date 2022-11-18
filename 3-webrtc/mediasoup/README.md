@@ -7,6 +7,7 @@
 4. [mediasoup-demo的docker部署-TODO](mediasoup_docker.md)
 
 ### 二. mediasoup基础
+1. [mediasoup的基本概念](mediasoup的基本概念.md)
 1. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
 1. [mediasoup-demo信令](mediasoup_demo_signalling.md)
 2. [libmediasoupclient介绍](libmediasoupclient_intro.md)
