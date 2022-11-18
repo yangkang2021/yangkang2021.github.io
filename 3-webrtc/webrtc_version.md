@@ -3,19 +3,41 @@
 - chromium发布计划：https://chromiumdash.appspot.com/schedule
 
 ## 2. 应用项目对webrtc的依赖版本：
-1. Chrome 正式版本: 版本 97.0.4692.71（正式版本） （64 位）
+1. Chrome 正式版本: 版本 107.0.5304.107（正式版本） （64 位） 2022-11-18
 2. chrome beta下载地址：https://www.google.com/chrome/beta/
 2. mediasoup：不区分版本，或者>=M84
 3. libmediasoupclient：M94
 4. srs-webrtc：
 5. webrtc新官网: https://webrtc.org
 6. webrtc老官网: https://webrtc.github.io/webrtc-org
+7. webrtc官方发布记录：https://webrtc.googlesource.com/src/+/refs/heads/main/docs/release-notes.md
 
 ## 3. webrtc版本发布记录
+### M107(2022年10月17日)
+1. 公告
+2. 亮点功能
+3. 新功能和bug修复
+    - Add support for the abs-capture-time header extension.
+    - Add new parameter for H.264
+    - Remove AsyncInvoker
+    - ...
+ 
+[查看M107更多信息](https://groups.google.com/g/discuss-webrtc/c/StVFkKuSRc8/m/aL629ZA6AgAJ)
+
+### M106
+没用发出版本通知更新
+
+### M105(2022年8月18日)
+[查看M105更多信息](https://groups.google.com/g/discuss-webrtc/c/5KBtZx2gvcQ/m/HYKhV8ERDgAJ)
+
+### M104(2022年7月4日)
+[查看M104更多信息](https://groups.google.com/g/discuss-webrtc/c/PZxgk-aUFhw/m/5CkxzxUMAgAJ)
+
+### M100-M103
+没用发出版本通知更新
 
 ### M99(2022年3月4日)
 [查看M99更多信息](https://groups.google.com/g/discuss-webrtc/c/Yf6c3HW4N3k/m/3SC_Hy15BQAJ)
-
 
 ### M98(2022年2月14日 )
 1. 公告
