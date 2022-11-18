@@ -1,6 +1,6 @@
 # mediasoup的基本概念
 
-### mediasoup的对象
+### 一. mediasoup的对象
 1. 标准PeerConnection在哪里？
     - 客户端：pc =PeerConnection
     - 一个Transport代表一个pc。 官方的接口都是提供两个pc。 
@@ -19,7 +19,7 @@
     - producer就是网Router加入一个输入，consumer就加一个输出。
     - producer和consumer是1对多关系。 创建时通过id建立路由表。
 
-### mediasoup应用场景 
+### 二. mediasoup应用场景 
 1. 视频会议 
     - 直接看官方demo，每个room绑定一个router。 
     - 所以一切的东西(transport，producer，consumer)都在这个router内部。
