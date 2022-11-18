@@ -14,13 +14,19 @@
 
 ## 3. webrtc版本发布记录
 ### M107(2022年10月17日)
-1. 公告
-2. 亮点功能
-3. 新功能和bug修复
+1. 公告(0)
+2. 亮点功能(0)
+3. 新功能(9)
     - Add support for the abs-capture-time header extension.
     - Add new parameter for H.264
     - Remove AsyncInvoker
-    - ...
+    - webrtc-internals should give an indication of what sendEncodings were passed
+    - Implement and ship DisplayMediaStreamConstraints.surfaceSwitching
+    - Implement and ship DisplayMediaStreamConstraints.systemAudio
+    - Region Capture Support crop tokens on all Element types
+    - Share-this-tab-intead - Tracking Bug
+    - Preferred Display-Surface - Tracking Bug
+4. bug修复(22)
  
 [查看M107更多信息](https://groups.google.com/g/discuss-webrtc/c/StVFkKuSRc8/m/aL629ZA6AgAJ)
 
