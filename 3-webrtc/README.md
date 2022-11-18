@@ -11,7 +11,8 @@
 2. [webrtc的voip接口与例子](webrtc的voip接口与例子.md)
 3. [webrtc的nack](webrtc的nack.md)
 4. [webrtc集成ffmpeg的方法](webrtc集成ffmpeg的方法.md)
-4. [webrtc和mediasoup音视频码率大小](webrtc和mediasoup音视频码率大小.md)
+5. [webrtc和mediasoup音视频码率大小](webrtc和mediasoup音视频码率大小.md)
+6. [webrtc的屏幕共享](webrtc的屏幕共享.md)
 
 ### (三) 模块详细分析
 1. [webrtc详细分析(七)：webrtc的统计模块](webrtc详细分析(七)：webrtc的统计模块.md)
