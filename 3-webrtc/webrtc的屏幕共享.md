@@ -7,7 +7,7 @@
 ### 二. webrtc自身的屏幕共享方案
 
 1. pc：windows，mac，linux
-   - 用各种平台api：实现了窗口和屏幕采集
+   - 用各自平台api：实现了窗口和屏幕采集
    - 代码目录：webrtc\src\modules\desktop_capture
    - **分析：没有录制系统声音，mic的声音在通话流。**
    - [参考](https://blog.csdn.net/zhangpeng_linux/article/details/85858475)
