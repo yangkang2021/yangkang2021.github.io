@@ -54,10 +54,11 @@
         - sendingRemoteRtpParameters：用于本地设置到pc。
     - 服务端：发现有有人推流，遍历其他人：如果join时记录的rtp与produce的rtp匹配就推给他。
 ### 4.其他
-1.  mediasoup方便：
+1.  mediasoup优点：
     - 流控方便：暂停，恢复，打开，关闭 很容易。
     - 干掉与sfu的sdp传输与协商：实现了自己的一套简单RtpParameters传递与协商。
     - 参数控制变动容易：分辨率、码率、帧率、采样率、声道数，起始码率，最小码率，最大码率，codec，simulcast，svc。
+    - 非常重要：支持基于simulcast/svc的多路流，实现拉流端码率切换。
 2. webrtc内建的编解码器测试
     - VP8：支持simulcast, 支持SVC
     - VP9： server报错不支持simulcast, 支持SVC且必须至少两层

@@ -22,7 +22,16 @@
     - 用chrome自带的api
 
 ### 三. 我们的方案
-- pc(windows/mac/linux)：**用obs**。
-- Android：**在webrtc android的基础上增加AudioTrack录制系统声音**。
-- ios：**用ReplayKit**。
-- web端：用chrome自带的api。
+1. pc(windows/mac/linux)：**用obs**。
+2. Android：**在webrtc android的基础上增加AudioTrack+AudioPlaybackCapture录制系统声音**。
+    - AudioTrack + MediaRecorder.AudioSource.MIC/Default
+    - AudioTrack + AudioPlaybackCapture：Android10及以后支持
+3. ios：**用ReplayKit**。
+    - RPScreenRecorder只能本应用内录屏
+    - RPSystemBroadcastPickerView+独立进程的扩展应用实现，需要跨进程传递采集的数据。
+    - 实现一个BroadcastExtensionLauncher
+4. web端：用chrome自带的api。
+
+### 四. 怎么处理：麦克风音频流 + 系统声音流的并存
+- 方案1：多路音频流独立，可能有回音消除问题吗
+- 方案2：混音成一路到通话流。
