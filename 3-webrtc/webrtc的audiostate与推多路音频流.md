@@ -13,7 +13,7 @@
 4. **如果自己实现了AudioSource音频数据，需要丢掉从adm获取的数据！！！**
 5. 如果要混音的方案就重载adm。
 
-### 
+### 三. 分析代码
 1. PeerConnectionFactory对视频只提供CreateVideoTrack接口 + 没有CreateVideoSource
 2. PeerConnectionFactory对视频提供了CreateAudioTrack接口 + CreateAudioSource接口。
 ![](.webrtc的audiostate与推多路音频流_images/61c10dd3.png)
