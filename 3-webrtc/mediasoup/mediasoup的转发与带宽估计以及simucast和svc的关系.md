@@ -1,7 +1,7 @@
 # mediasoup的分发与带宽估计以及simucast/svc的关系
 >大小流(simucast/svc)对sfu很重要，看看mediasoup的实现。
 >
->一句话：推流靠与sfu带宽估计调整大小流(simucast/svc)的码率分辨率帧率，拉流sfu靠与拉流端的带宽估计动态选择码流。
+>一句话：推流靠与sfu带宽估计调整大小流(simucast/svc)的码率分辨率帧率，拉流sfu靠与拉流端的带宽估计动态选择码流二不是码流。
 
 ### 一. mediasoup的分发与带宽估计以及simucast/svc的关系
 1. 每一路流：mediasoup是1对N的分发。 
