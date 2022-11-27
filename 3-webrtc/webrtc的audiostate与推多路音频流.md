@@ -12,6 +12,7 @@
 3. 两个数据会不会冲突：webrtc自己的LocalAudioSource没有产生数据，所以不会。
 4. **如果自己实现了AudioSource音频数据，需要丢掉从adm获取的数据！！！**
 5. 如果要混音的方案就重载adm。
+结论：方案1要改webrtc源码，方案二要自定义adm且只有一路流。
 
 ### 三. 分析代码
 1. PeerConnectionFactory对视频只提供CreateVideoTrack接口 + 没有CreateVideoSource
