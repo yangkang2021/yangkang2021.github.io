@@ -8,11 +8,11 @@
 
 ### 二. mediasoup基础
 1. mediasoup-demo的sever和app学习
-    1. [前端app的架构.md](1-前端app的架构.md)
-    2. [前端app的gulp编译](2-前端app的gulp编译.md)
-    3. [mediasoup的bot](mediasoup的bot.md)
-    4. [media-demo-server源码入门](demo-server-nodejs.md)
-    4. [demo-server-nodejs源码分析](demo-server-nodejs源码分析.md)
+    1. [前端app的架构](mediasoup-demo/1-前端app的架构.md)
+    2. [前端app的gulp编译](mediasoup-demo/2-前端app的gulp编译.md)
+    3. [mediasoup的bot](mediasoup-demo/mediasoup的bot.md)
+    4. [media-demo-server源码入门](mediasoup-demo/demo-server-nodejs.md)
+    4. [demo-server-nodejs源码分析](mediasoup-demo/demo-server-nodejs源码分析.md)
 1. [mediasoup的基本概念](mediasoup的基本概念.md)
 1. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
 1. [mediasoup-demo信令](mediasoup_demo_signalling.md)
