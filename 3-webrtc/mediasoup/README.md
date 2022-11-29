@@ -7,7 +7,7 @@
 4. [mediasoup-demo的docker部署-TODO](mediasoup_docker.md)
 
 ### 二. mediasoup基础
-1. mediasoup-demo的sever和app学习
+1. [mediasoup-demo的sever和app学习](mediasoup-demo)
     1. [前端app的架构](mediasoup-demo/1-前端app的架构.md)
     2. [前端app的gulp编译](mediasoup-demo/2-前端app的gulp编译.md)
     3. [mediasoup的bot](mediasoup-demo/mediasoup的bot.md)
