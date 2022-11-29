@@ -1,5 +1,5 @@
 ## Protoo的使用与实现
-> wss://123.57.87.188:4443/?roomId=1&peerId=rscbbke
+> wss://123.57.87.177:4443/?roomId=1&peerId=rscbbke
 
 1. Protoo协议：https://protoo.versatica.com/
     - 实现了基于json的传输协议。

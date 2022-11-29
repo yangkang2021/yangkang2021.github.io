@@ -32,8 +32,8 @@
     ffmpeg -re -i bipbop.mp4 -vcodec libx264 -acodec aac -f flv -y rtmp://192.168.0.200/live/livestream
     webrtc://192.168.0.200:1990/live/livestream?schema=https&eip=192.168.0.200
     
-    http://123.57.87.188:8080/live/livestream.flv
-    webrtc://123.57.87.188:1990/live/livestream?schema=https&eip=123.57.87.188
+    http://123.57.87.177:8080/live/livestream.flv
+    webrtc://123.57.87.177:1990/live/livestream?schema=https&eip=123.57.87.177
     
     ```
     ```
