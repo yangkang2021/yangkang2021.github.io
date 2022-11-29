@@ -14,6 +14,8 @@
 5. [webrtc和mediasoup音视频码率大小](webrtc和mediasoup音视频码率大小.md)
 6. [webrtc的屏幕共享](webrtc的屏幕共享.md)
 7. [webrtc的audiostate与推多路音频流](webrtc的audiostate与推多路音频流.md)
+8. [webrtc-视频渲染的缩放类型ScaleType](webrtc-视频渲染的缩放类型ScaleType.md)
+9. [webrtc解决bug之Mac下MutexImpl析构崩溃](webrtc解决bug之Mac下MutexImpl析构崩溃.md)
 
 ### (三) 模块详细分析
 1. [webrtc详细分析(七)：webrtc的统计模块](webrtc详细分析(七)：webrtc的统计模块.md)

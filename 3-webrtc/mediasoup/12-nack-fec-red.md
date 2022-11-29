@@ -24,6 +24,8 @@
 - 还想提升一下：就把音频的nack/red打开，native视频的flexfec打开。
 - 继续提升：音频red包N次，视频red包N次，[参考：丢包率和重复发包次数的关系](丢包率和重复发包次数的关系.md)
 
+![](.12-nack-fec-red_images/3e187b63.png)
+
 ### 二. 简单总结 
 - opus的带内fec是codec自带的，就是原始音频包。opus带内fec增加很少带宽。
 - 视频默认只开nack ，抗不了20%丢包。
