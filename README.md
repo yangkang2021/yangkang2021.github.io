@@ -32,7 +32,7 @@
 ## 3-音视频与实时通讯
 1. [srs入门](3-webrtc/learn_srs.md)
 2. [webrtc详细分析系列](3-webrtc/README.md)
-3. [obs系列](3-webrtc/learn_srs.md)
+3. [obs系列](3-webrtc/obs)
 4. [mediasoup系列](3-webrtc/mediasoup/README.md)
 
 ## 4-数学基础
