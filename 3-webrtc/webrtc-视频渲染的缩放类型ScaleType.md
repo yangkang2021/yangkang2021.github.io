@@ -1,7 +1,7 @@
 # webrtc-视频渲染的缩放类型ScaleType
 >webrtc视频渲染经常调整渲染方式，看看webrtc下怎么做：
-> - 保持比例裁剪填充(适合人头画面)，
-> - 保持比例显示全部画面(适合屏幕共享)
+> - 保持比例裁剪填充(SCALE_ASPECT_FILL，适合人头画面)，
+> - 保持比例显示全部画面(SCALE_ASPECT_FIT，适合屏幕共享)
 
 ### 一. ios的opengl或者Metal
 > 由用户调整RTCVideoRenderer在父视图中的显示区域bounds完成。
@@ -50,7 +50,9 @@
 ```
 
 ### 二. android的SurfaceViewRenderer
-> 通过onMeasure调整view的实现, 所以SurfaceViewRenderer要放到一个更大的父容器里面且高宽是wrap_content，才能实现SCALE_ASPECT_FIT
+> - 通过onMeasure调整view的实现
+> - 可以根据父容器自动调整view的大小，不用sdk用户在重新计算
+> - 所以SurfaceViewRenderer要放到一个更大的父容器里面且高宽是wrap_content，才能实现保持比例显示全部画面SCALE_ASPECT_FIT
 
 - SurfaceViewRenderer.java缩放控制参数
 ```
