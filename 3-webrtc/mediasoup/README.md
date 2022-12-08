@@ -42,6 +42,7 @@
 7. [丢包率和重复发包次数的关系](丢包率和重复发包次数的关系.md)
 8. [mediasoup的缓存](mediasoup的缓存.md)
 9. [mediasoup的转发与带宽估计以及simucast和svc的关系](mediasoup的转发与带宽估计以及simucast和svc的关系.md)
+10. [mediasoup-v4新功能预测-分发有限路数的流并动态切换](mediasoup-v4新功能预测-分发有限路数的流并动态切换.md)
 
 ### 四. mediasoup-worker-sdk的源码分析
 1. [worker封装层的对象模型-以go为例)](23-mediasoup-worker封装层的对象模型.md)
