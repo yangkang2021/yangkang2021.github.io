@@ -19,10 +19,9 @@
 2. [libmediasoupclient介绍](libmediasoupclient_intro.md)
 3. [mediasoup-demo的android客户端代码介绍](mediasoup_demo_android_client.md)
 4. [protoo使用与实现](protoo.md)
-5. [mediasoup官方单端口实现](mediasoup_singleport.md)
-6. [mediasoup的demo的websocket的keepalive与断网检测](mediasoup_websocket_pingpong.md)
-7. [boardcaster与ffmpeg/gstreamer接入](boardcaster.md)
-8. [mediasoup-录制](19-mediasoup-录制.md)
+5. [mediasoup的demo的websocket的keepalive与断网检测](mediasoup_websocket_pingpong.md)
+6. [boardcaster与ffmpeg/gstreamer接入](boardcaster.md)
+7. [mediasoup-录制](19-mediasoup-录制.md)
 
 ### 三. mediasoup编解码器
 1. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
@@ -53,3 +52,8 @@
 ### 五. mediasoup-worker C++源码分析
 1. [mediasoup-workder的cpp文件列表](worker-src-files.md)
 2. [worker启动方式与启动参数](22-mediasoup-worker的启动参数.md)
+
+### 六. mediasoup版本变化
+1. [mediasoup的版本变更记录](https://github.com/versatica/mediasoup/blob/v3/CHANGELOG.md)
+1. 2022-06-22版本3.10.0：支持单端口: [mediasoup官方单端口实现](mediasoup_singleport.md)
+2. 2022-08-30版本3.10.6：与worker通讯协议变化: [mediasoup新版本的管道协议变化](mediasoup新版本的管道协议变化.md)
