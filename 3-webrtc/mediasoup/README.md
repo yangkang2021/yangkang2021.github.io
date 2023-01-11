@@ -1,8 +1,9 @@
 # mediasoup知识体系
 
-### 零. 必读系列
-1. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
+### 零. 概述
 2. [mediasoup的优缺点.md](mediasoup的优缺点.md)
+1. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
+1. [mediasoup的基本概念](mediasoup的基本概念.md)
 
 ### 一. mediasoup编译运行调试
 1. [mediasoup的开源项目整理](01-mediasoup-opensource.md)
@@ -17,7 +18,6 @@
     3. [mediasoup的bot](mediasoup-demo/mediasoup的bot.md)
     4. [media-demo-server源码入门](mediasoup-demo/demo-server-nodejs.md)
     4. [demo-server-nodejs源码分析](mediasoup-demo/demo-server-nodejs源码分析.md)
-1. [mediasoup的基本概念](mediasoup的基本概念.md)
 1. [mediasoup的web端demo的参数](13-mediasoup的web端demo的参数.md)
 1. [mediasoup-demo信令](mediasoup_demo_signalling.md)
 2. [libmediasoupclient介绍](libmediasoupclient_intro.md)
@@ -44,7 +44,6 @@
 7. [丢包率和重复发包次数的关系](丢包率和重复发包次数的关系.md)
 8. [mediasoup的缓存](mediasoup的缓存.md)
 9. [mediasoup的转发与带宽估计以及simucast和svc的关系](mediasoup的转发与带宽估计以及simucast和svc的关系.md)
-10. [mediasoup-v4新功能预测-分发有限路数的流并动态切换](mediasoup-v4新功能预测-分发有限路数的流并动态切换.md)
 11. [mediasoup弱网优化](mediasoup弱网优化.md)
 
 ### 四. mediasoup-worker-sdk的源码分析
@@ -60,3 +59,4 @@
 1. [mediasoup的版本变更记录](https://github.com/versatica/mediasoup/blob/v3/CHANGELOG.md)
 1. 2022-06-22版本3.10.0：支持单端口: [mediasoup官方单端口实现](mediasoup_singleport.md)
 2. 2022-08-30版本3.10.6：与worker通讯协议变化: [mediasoup新版本的管道协议变化](mediasoup新版本的管道协议变化.md)
+10. [mediasoup-v4新功能预测-分发有限路数的流并动态切换](mediasoup-v4新功能预测-分发有限路数的流并动态切换.md)
