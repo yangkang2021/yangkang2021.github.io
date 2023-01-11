@@ -1,5 +1,9 @@
 # mediasoup知识体系
 
+### 零. 必读系列
+1. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
+2. [mediasoup的优缺点.md](mediasoup的优缺点.md)
+
 ### 一. mediasoup编译运行调试
 1. [mediasoup的开源项目整理](01-mediasoup-opensource.md)
 2. [mediasoup和mediasoup-demo编译](mediasoup_build.md)
@@ -24,7 +28,6 @@
 7. [mediasoup-录制](19-mediasoup-录制.md)
 
 ### 三. mediasoup编解码器
-1. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
 2. [webrtc各平台的编码工厂支持情况](18-webrtc各平台的编码工厂支持情况.md)
 3. [webrtc-自定义编解码工厂](25-webrtc-自定义编解码工厂.md)
 4. [mediasoup全端支持h264以及硬编硬解的方案](15-mediasoup全端支持h264以及硬编硬解的方案.md)
