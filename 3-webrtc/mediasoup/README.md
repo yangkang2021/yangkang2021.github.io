@@ -1,7 +1,7 @@
 # mediasoup知识体系
 
 ### 零. 概述
-2. [mediasoup的优缺点.md](mediasoup的优缺点.md)
+1. [mediasoup的优缺点](mediasoup的优缺点.md)
 1. [mediasoup媒体控制与协商机制](11-webrtc-parameters.md)
 1. [mediasoup的基本概念](mediasoup的基本概念.md)
 
