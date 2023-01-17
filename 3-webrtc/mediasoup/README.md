@@ -60,3 +60,8 @@
 1. 2022-06-22版本3.10.0：支持单端口: [mediasoup官方单端口实现](mediasoup_singleport.md)
 2. 2022-08-30版本3.10.6：与worker通讯协议变化: [mediasoup新版本的管道协议变化](mediasoup新版本的管道协议变化.md)
 10. [mediasoup-v4新功能预测-分发有限路数的流并动态切换](mediasoup-v4新功能预测-分发有限路数的流并动态切换.md)
+
+## 七. 项目研究
+1. [libwebrtc项目](https://github.com/yangkang2021/libwebrtc)
+2. [Mediasoup Server集群](https://github.com/yangkang2021/mediasoup_server_cluster)
+3. [Mediasoup全平台客户端](https://github.com/yangkang2021/mediasoup_client_full_platform)
