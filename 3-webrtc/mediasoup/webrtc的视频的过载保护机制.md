@@ -34,3 +34,6 @@
 ![](.webrtc的视频的过载保护机制_images/fba0340c.png)
 3. 设置VideoTrack的content_hint：
 ![](.webrtc的视频的过载保护机制_images/70118848.png)
+
+### 五. mediasoup用户
+过载保护行为是纯粹的客户端行为，mediasoup没有参与控制。
