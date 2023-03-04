@@ -13,3 +13,5 @@
 9. koreanDollLikeness_v10
 10. dreamlike
 11. civitai
+12. d-id: 微软数字人生成平台
+12. azure：微软文字转语音
